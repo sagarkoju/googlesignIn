@@ -1,3 +1,4 @@
+import 'package:eva_icons_flutter/eva_icons_flutter.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:google_sign_in/google_sign_in.dart';
@@ -52,14 +53,14 @@ class _HomePageState extends State<HomePage> {
             SizedBox(
               height: 20,
             ),
-            RaisedButton(
-              color: Colors.blue,
-            onPressed: (){
-              googlesign();
-            },
-            child: Text('Google Sign In'),
-            textColor: Colors.white,
-            )
+            FlatButton.icon(
+                   color: Colors.blueGrey,
+                  onPressed: () {
+                 googlesign();          },
+                                icon: Icon(EvaIcons.google),
+                               label: Text('Google Sign In'),
+                               textColor: Colors.black,
+                               ),
           ],
         ),
       ),
